@@ -18,7 +18,7 @@ function add() {
 	//upload car, and background images on the canvas.
 	background_ImageTag = new Image();
 	background_ImageTag.onload = uploadBackground();
-	background_ImageTag.src = background_img;
+	background_ImageTag.src = background_image;
 
 	greencar_imageTag = new Image();
 	greencar_imageTag.onload = uploadgreencar();
@@ -46,7 +46,7 @@ function my_keydown(e)
 	console.log(keyPressed);
 		if(keyPressed == '38')
 		{
-			up();
+			Up();
 			console.log("up");
 		}
 	
@@ -71,12 +71,12 @@ function my_keydown(e)
 		
 }
 
-function up()
+function Up()
 {
 	//Define function to move the car upward
 	if(greenCar_y>=0){
         greenCar_y=greenCar_y-10;
-        console.log("when Up arrow is pressed, X = "+greenCar_x+" | Y = "+grenCar_y);
+        console.log("when Up arrow is pressed, X = "+greenCar_x+" | Y = "+greenCar_y);
         uploadBackground();
         uploadgreencar();
     }
@@ -86,8 +86,8 @@ function down()
 {
 	//Define function to move the car downward
 	if(greenCar_y<=500){
-        greenCar_y=Rover_y+10;
-        console.log("when Up arrow is pressed, X = "+greenCar_x+" | Y = "+greenCar_y);
+        greenCar_y=greenCar_y+10;
+        console.log("when Down arrow is pressed, X = "+greenCar_x+" | Y = "+greenCar_y);
         uploadBackground();
         uploadgreencar();
     }
@@ -97,7 +97,7 @@ function left()
 {
 	//Define function to move the car left side
 	if(greenCar_x>=0){
-		greenCar_x=Rover_x-10;
+		greenCar_x=greenCar_x-10;
 		console.log("when Left arrow is pressed, X = "+greenCar_x+" | Y = "+greenCar_y);
 		uploadBackground();
 		uploadgreencar();
@@ -108,7 +108,7 @@ function right()
 {
 	//Define function to move the car right side
 	
-		if(Rover_x<=700){
+		if(greenCar_x<=700){
 			greenCar_x=greenCar_x+10;
 			console.log("when Right arrow is pressed, X = "+greenCar_x+" | Y = "+greenCar_y);
 			uploadBackground();
